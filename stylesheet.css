@@ -1,3 +1,4 @@
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -5,6 +6,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
+/* Body Styling */
 body {
     color: #ededed;
     background: #081b29;
@@ -19,6 +21,7 @@ body {
     align-items: center;
 }
 
+/* Home Section */
 .home {
     display: flex;
     width: 90%;
@@ -41,12 +44,9 @@ body {
     margin: 10px;
 }
 
-
-
 .p1 span {
     color: rgb(222, 237, 238);
 }
-
 
 .p2 {
     font-size: 15px;
@@ -75,20 +75,16 @@ body {
 
 .icons a {
     color: white;
-    justify-content: center;
-    align-items: center;
     font-size: 40px;
     margin: 30px 15px 30px 0;
     text-decoration: none;
     transition: all 0.3s ease;
     display: inline-block;
-    /* Ensure the same display as .mouse */
 }
 
 .icons a:hover {
     transform: translateY(-2px);
     text-shadow: 10px 8px 16px white;
-    /* Added these lines for movement */
 }
 
 .mouse {
@@ -97,7 +93,6 @@ body {
     text-decoration: none;
     transition: all 0.3s ease;
     display: inline-block;
-    /* Ensure the same display property */
 }
 
 .mouse:hover {
@@ -131,8 +126,17 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
+    /* Ensure links are not underlined */
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+/* About Me Section */
 .aboutMe {
     display: grid;
     grid-template-columns: 2fr 3fr;
@@ -140,10 +144,10 @@ body {
     justify-content: center;
     padding: 50px 20px;
     width: 90%;
-
 }
 
-.aboutMe .column1 {
+.aboutMe .column1,
+.aboutMe .column2 {
     text-align: center;
     padding: 10px;
     background-color: #163346;
@@ -152,23 +156,22 @@ body {
     box-shadow: 2px 2px 2px 2px #425b6b;
 }
 
+.aboutMe .column1 {
+    padding: 10px;
+}
+
 .aboutMe .column2 {
     text-align: left;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 10px;
-    background-color: #163346;
-    height: 350px;
-    border-radius: 3%;
     margin: 10px;
-    box-shadow: 2px 2px 2px 2px #425b6b;
 }
 
 .aboutMe h2 {
     font-size: 30px;
     margin-bottom: 20px;
-    justify-content: first baseline;
 }
 
 .aboutMe p {
@@ -177,6 +180,7 @@ body {
     margin-bottom: 20px;
 }
 
+/* Skills Section */
 .skill-class {
     width: 80%;
     margin: 0 auto;
@@ -238,7 +242,7 @@ body {
     background-color: #c1dff1;
 }
 
-
+/* CV Button */
 .cv {
     padding: 10px 20px;
     font-size: 18px;
@@ -261,6 +265,7 @@ body {
     box-shadow: 0 4px 8px #268fd1;
 }
 
+/* Projects Section */
 .service-heading {
     font-family: "PT Serif", serif;
     letter-spacing: 2px;
@@ -269,10 +274,12 @@ body {
     font-size: 40px;
 }
 
+/* Projects Section */
 .wrapper {
     display: flex;
     justify-content: space-around;
-    padding: 20px;
+    padding: 20px 40px;
+    /* Increased padding to push boxes to the right */
 }
 
 .card-main {
@@ -281,6 +288,12 @@ body {
     width: 300px;
     height: 400px;
     margin: 20px;
+}
+
+/* Adjust the width of the cards if needed */
+.card-main {
+    width: 280px;
+    /* Example adjustment */
 }
 
 .card-main:before,
@@ -366,20 +379,18 @@ body {
     z-index: 2;
 }
 
-.image-name:hover {
-    color: black;
-}
-
-
+/* Projects Section Specific Styles */
 .pro1,
-.pro2 {
+.pro2,
+.pro3,
+.pro4,
+.pro5 {
     display: grid;
     grid-template-columns: 2fr 2fr;
     align-items: center;
     justify-content: center;
     padding: 50px 20px;
     width: 90%;
-    flex-direction: row;
     margin: 20px 100px;
     background-color: #163346;
     border-radius: 10px;
@@ -423,9 +434,9 @@ body {
     width: 500px;
     height: 400px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5), 0 0 10px #80bde4;
-    /* Adding box shadow */
 }
 
+/* Contact Section */
 .whole-contact {
     margin-top: 40px;
     margin-left: 40px;
@@ -440,19 +451,16 @@ body {
     font-size: 40px;
     justify-content: center;
     color: #133c55;
-
 }
 
 .contact {
     display: grid;
     grid-template-columns: 2fr 2fr;
-    align-items: left;
-    justify-content: left;
+    align-items: start;
+    justify-content: start;
     padding: 50px 20px;
     width: 90%;
-    flex-direction: row;
     margin: 20px 100px;
-
 }
 
 .column-1 h3,
@@ -466,7 +474,6 @@ body {
 
 .column-1 p {
     color: #386fa4;
-
 }
 
 .column-2 {
@@ -474,33 +481,22 @@ body {
     flex-direction: column;
     background-color: #386fa4;
     border: 2px solid #80bde4;
+}
 
+#name,
+#email,
+#message,
+#send-btn {
+    margin: 5px 20px;
+    padding: 10px;
 }
 
 #name {
     margin-top: 40px;
-    padding: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 5px;
-}
-
-#email {
-    margin: 5px 20px;
-    padding: 10px;
 }
 
 #message {
-    margin: 5px 20px;
-    padding: 10px;
     height: 150px;
-}
-
-#send-btn {
-    margin-bottom: 40px;
-    padding: 10px;
-    margin-top: 5px;
-
 }
 
 .column-2 button {
@@ -529,18 +525,84 @@ body {
 
 .column-2 input::placeholder {
     color: #d5edf1;
-
 }
 
 .column-2 input {
     color: #d5edf1;
     background-color: #133c55;
-
 }
-
-
 
 .contact-icons article {
     color: #0c0c0c;
     font-weight: 600;
+}
+
+.certificates {
+    padding: 50px 20px;
+    background-color: #163346;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.certificates-heading {
+    font-size: 40px;
+    color: #80bde4;
+    margin-bottom: 20px;
+}
+
+.certificates-slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.certificates-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.certificate-item {
+    flex: 0 0 auto;
+    width: 100%;
+    /* Adjust based on the number of items visible */
+    margin-right: 20px;
+    /* Adjust based on your layout */
+}
+
+.certificate-item img {
+    width: 80%;
+    height: 80%;
+    transition: transform 0.3s ease;
+}
+
+.certificate-item:hover img {
+    transform: scale(0.9);
+    /* Adjust the scale value as needed */
+}
+
+.nav-button {
+    background-color: #fff;
+    /* Adjust based on your design */
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    /* Ensure the buttons are on top of other elements */
+}
+
+.nav-button.prev {
+    left: 50px;
+    /* Adjust based on your layout */
+}
+
+.nav-button.next {
+    right: 50px;
+    /* Adjust based on your layout */
+}
+
+html {
+    scroll-behavior: smooth;
 }
